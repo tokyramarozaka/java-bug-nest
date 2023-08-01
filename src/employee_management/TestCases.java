@@ -1,6 +1,6 @@
 package employee_management;
+public class Test {
 
-public class TestCases {
     public static FullTimeEmployee fullTimeEmployeeKoto(){
         return new FullTimeEmployee(1, "Koto", 3_000_000);
     }
@@ -10,15 +10,14 @@ public class TestCases {
     }
 
     public static void main(String[] args) {
-        FullTimeEmployee koto = TestCases.fullTimeEmployeeKoto();
-        PartTimeEmployee lita = TestCases.partTimeEmployeeLita();
-
+    	FullTimeEmployee koto = fullTimeEmployeeKoto();
+        PartTimeEmployee lita = partTimeEmployeeLita();
         // TODO : prevent the direct access here
-        koto.monthlySalary = 6_000_000;
-        lita.hoursWorked = 1_000;
+        koto.setMonthlySalary(6_000_000);
+        lita.setHoursWorked(1_000);
 
         // TODO : do not allow incoherent changes on salaries (applies to full time employees too)
-        lita.hourlyRate = -10_000_000;
+        lita.setHourlyRate(10_000_000);
 
         // TODO : fix the string format of both full time and part time employees
         // NOTE : do not show sensitive data such as hourlyRate or monthlySalary here !
@@ -26,3 +25,6 @@ public class TestCases {
         System.out.println("Details about Lita " + lita);
     }
 }
+
+
+
