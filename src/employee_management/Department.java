@@ -1,9 +1,8 @@
 package employee_management;
+import java.util.Set;
 
-/**
- * TODO : a department is a collection of employees. It has a name and a set of employees in it.
- */
 public class Department {
+	
     /**
      * TODO : Employees should never ever be duplicated in a single department.
      * Please check if it already exists in the department before inserting if need be. Duplicate
@@ -12,4 +11,27 @@ public class Department {
      * TODO : for our HR officer, give a function to show all details about employees, including
      * their pay.
      */
+	
+	
+	private Set<Employee>employee;
+	
+	Department(Set<Employee>employee){
+		this.employee=employee;
+	}
+
+	public Set<Employee> getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Set<Employee> employee) {
+		this.employee = employee;
+	}
+
+	@Override
+	public String toString() {
+		return "Department [employee=" + employee + "]";
+	}
+	
 }
+	
+	
