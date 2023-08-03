@@ -1,13 +1,8 @@
 package employee_management;
-import java.util.List;
-
-/**
- * TODO : a department is a collection of employees. It has a name and a set of employees in it.
- */
-
-
+import java.util.Set;
 
 public class Department {
+	
     /**
      * TODO : Employees should never ever be duplicated in a single department.
      * Please check if it already exists in the department before inserting if need be. Duplicate
@@ -17,29 +12,25 @@ public class Department {
      * their pay.
      */
 	
-	private List<PartTimeEmployee> partTimeEmployee;
-	private List<FullTimeEmployee> fullTimeEmployee;
 	
-	public void setPartTimeEmployee(List<PartTimeEmployee> partTimeEmployee) {
-		this.partTimeEmployee=partTimeEmployee;
-	}
-	public List<PartTimeEmployee> getPartTimeEmployee() {
-		return partTimeEmployee;
-	}
+	private Set<Employee>employee;
 	
-	
-	public void setFullTimeEmployee(List<FullTimeEmployee> fullTimeEmployee) {
-		this.fullTimeEmployee=fullTimeEmployee;
+	Department(Set<Employee>employee){
+		this.employee=employee;
 	}
-	
-	public List<FullTimeEmployee> getFullTimeEmployee() {
-		return fullTimeEmployee;
+
+	public Set<Employee> getEmployee() {
+		return employee;
 	}
+
+	public void setEmployee(Set<Employee> employee) {
+		this.employee = employee;
+	}
+
 	@Override
 	public String toString() {
-		return "Department [partTimeEmployee=" + partTimeEmployee + ", fullTimeEmployee=" + fullTimeEmployee + "]";
+		return "Department [employee=" + employee + "]";
 	}
-	
 	
 }
 	

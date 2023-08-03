@@ -10,8 +10,9 @@ public class Test {
     }
 
     public static void main(String[] args) {
-    	FullTimeEmployee koto = fullTimeEmployeeKoto();
-        PartTimeEmployee lita = partTimeEmployeeLita();
+    	FullTimeEmployee koto =  fullTimeEmployeeKoto();
+    	PartTimeEmployee lita = partTimeEmployeeLita();
+
         // TODO : prevent the direct access here
         koto.setMonthlySalary(6_000_000);
         lita.setHoursWorked(1_000);
@@ -25,6 +26,5 @@ public class Test {
         System.out.println("Details about Lita " + lita);
     }
 }
-
 
 
