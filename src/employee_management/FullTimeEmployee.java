@@ -1,13 +1,10 @@
 package employee_management;
 
-public class FullTimeEmployee {
-    private final int employeeId;
-    private final String name;
+public class FullTimeEmployee extends Employee{
     private double monthlySalary;
 
     public FullTimeEmployee(int employeeId, String name, double monthlySalary) {
-        this.employeeId = employeeId;
-        this.name = name;
+        super(employeeId, name);
         this.monthlySalary = monthlySalary;
     }
 
