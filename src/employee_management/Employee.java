@@ -1,6 +1,6 @@
 package employee_management;
 
-public class Employee {
+public abstract class Employee {
     private final int employeeId;
     private final String name;
 
@@ -15,5 +15,12 @@ public class Employee {
 
     public String getName() {
         return name;
+    }
+
+    public abstract double calculatePay();
+
+    @Override
+    public String toString() {
+        return "EmployeeId : " + employeeId + "\nName : " + name + "\nPay : " + calculatePay();
     }
 }
