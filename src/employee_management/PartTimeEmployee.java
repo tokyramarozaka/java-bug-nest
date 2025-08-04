@@ -1,21 +1,34 @@
 package employee_management;
 
-public class PartTimeEmployee {
-    public int employeeId;
-    public String name;
-    public double hoursWorked;
-    public double hourlyRate;
-
+public class PartTimeEmployee extends Employee{
+    private double hoursWorked;
+    private double hourlyRate;
 
     public PartTimeEmployee(int employeeId, String name, double hoursWorked, double hourlyRate) {
-        this.employeeId = employeeId;
-        this.name = name;
+        super(employeeId, name);
         this.hoursWorked = hoursWorked;
         this.hourlyRate = hourlyRate;
     }
 
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+    @Override
     public double calculatePay() {
         return hoursWorked * hourlyRate;
+    }
+
+    @Override
+    public double calculateTax() {
+        return hoursWorked * hourlyRate * 0.15;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +"\nHours Worked : " + hoursWorked;
     }
 }
 
