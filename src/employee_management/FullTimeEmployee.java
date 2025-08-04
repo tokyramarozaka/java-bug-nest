@@ -1,9 +1,9 @@
 package employee_management;
 
 public class FullTimeEmployee {
-    public int employeeId;
-    public String name;
-    public double monthlySalary;
+    private final int employeeId;
+    private final String name;
+    private double monthlySalary;
 
     public FullTimeEmployee(int employeeId, String name, double monthlySalary) {
         this.employeeId = employeeId;
