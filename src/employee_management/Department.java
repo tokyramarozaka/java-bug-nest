@@ -32,8 +32,10 @@ public class Department {
     public String getDepartmentDetails(){
         StringBuilder details = new StringBuilder();
         details.append("Department Name : ").append(name).append("\n");
+        details.append("-----------------------------------\n");
         for (Employee e : employees) {
             details.append(e.toString()).append("\n");
+            details.append("-----------------------------------\n");
         }
         return details.toString();
     }
