@@ -39,4 +39,29 @@ public class Department {
         }
         return details.toString();
     }
+
+    public String getEmployeesFullDetails(){
+        StringBuilder details = new StringBuilder();
+        details.append("Department Name : ").append(name).append("\n");
+        details.append("-----------------------------------\n");
+        for (Employee e : employees) {
+            if (e instanceof FullTimeEmployee) {
+                details.append(e.toString())
+                        .append("\nPay : ")
+                        .append(((FullTimeEmployee) e).calculatePay())
+                        .append("\n-----------------------------------\n");
+            }
+            else if (e instanceof PartTimeEmployee) {
+                details.append(e.toString())
+                        .append("\nHourly Rate : ")
+                        .append(((PartTimeEmployee) e).getHourlyRate())
+                        .append("\nHours Worked : ")
+                        .append(((PartTimeEmployee) e).getHoursWorked())
+                        .append("\nPay : ")
+                        .append(((PartTimeEmployee) e).calculatePay())
+                        .append("\n-----------------------------------\n");
+            }
+        }
+        return details.toString();
+    }
 }

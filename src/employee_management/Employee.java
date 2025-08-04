@@ -32,6 +32,8 @@ public abstract class Employee {
     public abstract double calculateTax();
     @Override
     public String toString() {
-        return "EmployeeId : " + employeeId + "\nName : " + name + "\nPay : " + calculatePay();
+        return "EmployeeId : " + employeeId + "\nName : " + name;
     }
+
+
 }

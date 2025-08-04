@@ -28,11 +28,7 @@ public class PartTimeEmployee extends Employee{
 
     @Override
     public String toString() {
-        return super.toString() +"\nHours Worked : " + hoursWorked +
-                                    "\nHourly Rate : " + hourlyRate +
-                                    "\nTax:" + calculateTax();
+        return super.toString() +"\nHours Worked : " + hoursWorked;
     }
-
-
 }
 
